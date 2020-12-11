@@ -17,4 +17,5 @@ merchant_repository.save(merchant_1)
 tag_1 = Tag("Groceries")
 tag_repository.save(tag_1)
 
-transaction_1 = Transaction
+transaction_1 = Transaction(15.84, merchant_1, tag_1)
+transaction_repository.save(transaction_1)
