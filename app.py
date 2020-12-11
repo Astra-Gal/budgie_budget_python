@@ -1,5 +1,4 @@
-from flask import Flask, render_template, redirect, request, url_for
-from flask import Blueprint
+from flask import Flask, Blueprint, render_template, redirect, request, url_for
 
 # import controller stuff
 
