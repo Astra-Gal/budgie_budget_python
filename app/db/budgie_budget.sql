@@ -14,7 +14,7 @@ CREATE TABLE merchants (
 
 CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
-    amount INT,
+    amount DECIMAL,
     merchant_id INT REFERENCES merchants(id),
     tag_id INT REFERENCES tags(id)
 );
