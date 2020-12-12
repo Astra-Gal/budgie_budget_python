@@ -71,3 +71,9 @@ def tag(transaction):
     results = run_sql(sql, values)[0]
     tag = Tag(results['category'], results['id'])
     return tag
+
+# get total for all transactions
+def total_transactions():
+    sql = "SELECT SUM (amount) FROM transactions"
+    total = run_sql(sql)
+    return total

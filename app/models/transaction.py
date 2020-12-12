@@ -5,3 +5,4 @@ class Transaction:
         self.merchant = merchant
         self.tag = tag
         self.id = id
+
