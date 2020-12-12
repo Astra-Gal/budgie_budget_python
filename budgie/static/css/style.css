@@ -4,7 +4,27 @@ body {
 
 #navbar {
     background-color: #F9B5AC;
+}
+
+#navbar > ul {
     display: flex;
+    justify-content: flex-end;
+}
+
+#navbar > ul > li {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #98DFEA;
+    border-radius: 7px;
+}
+
+#navbar > ul > li > a {
+    text-decoration: none;
+    color: #392F5A;
+    font-family: 'Cormorant', serif;
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
 h1 {
