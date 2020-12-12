@@ -52,3 +52,17 @@ def delete(id):
     sql = "DELETE FROM tags WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+# show all merchants assigned to a tag
+def merchants(tag):
+    merchants = []
+
+    sql = "SELECT merchants.* FROM merchants INNER JOIN transactions ON transactions.merchant_id = merchants.id WHERE tag_id = %s"
+    values = [tag.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        merchant = Merchant(row['name'], row['id'])
+        merchants.append(merchant)
+
+    return merchants

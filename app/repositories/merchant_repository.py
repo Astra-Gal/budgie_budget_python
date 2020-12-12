@@ -54,19 +54,17 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-# show all tags a merchant has THIS DOESN'T WORK YET!
-# def tags(merchant):
-#     tags = []
+# show all tags a merchant has
+def tags(merchant):
+    tags = []
 
-#     sql = "SELECT tags.* FROM tags INNER JOIN transactions ON transactions.tag_id WHERE merchant_id = %s"
-#     values = [merchant.id]
-#     results = run_sql(sql, values)
+    sql = "SELECT tags.* FROM tags INNER JOIN transactions ON transactions.tag_id = tags.id WHERE merchant_id = %s"
+    values = [merchant.id]
+    results = run_sql(sql, values)
 
-#     for row in results:
-#         tag = Tag(row['category'], row['id'])
-#         tags.append(tag)
+    for row in results:
+        tag = Tag(row['category'], row['id'])
+        tags.append(tag)
 
-#     return tags
+    return tags
 
-# alternative sql statement for above function, that also doesn't work!
-# SELECT tags.* FROM tags INNER JOIN transactions ON transactions.tag_id WHERE transactions.merchant_id = 1
