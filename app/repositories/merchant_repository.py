@@ -1,8 +1,8 @@
 from app.db.run_sql import run_sql
 
 from app.models.merchant import Merchant
-# from app.models.tag import Tag
-# from app.models.transaction import Transaction
+from app.models.tag import Tag
+from app.models.transaction import Transaction
 
 
 # save a merchant
@@ -53,3 +53,20 @@ def delete(id):
     sql = "DELETE FROM merchants WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+# show all tags a merchant has THIS DOESN'T WORK YET!
+# def tags(merchant):
+#     tags = []
+
+#     sql = "SELECT tags.* FROM tags INNER JOIN transactions ON transactions.tag_id WHERE merchant_id = %s"
+#     values = [merchant.id]
+#     results = run_sql(sql, values)
+
+#     for row in results:
+#         tag = Tag(row['category'], row['id'])
+#         tags.append(tag)
+
+#     return tags
+
+# alternative sql statement for above function, that also doesn't work!
+# SELECT tags.* FROM tags INNER JOIN transactions ON transactions.tag_id WHERE transactions.merchant_id = 1
