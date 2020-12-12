@@ -1,10 +1,10 @@
-from app.db.run_sql import run_sql
+from budgie.db.run_sql import run_sql
 
-from app.models.transaction import Transaction
-from app.models.merchant import Merchant
-from app.models.tag import Tag
-import app.repositories.merchant_repository as merchant_repository
-import app.repositories.tag_repository as tag_repository
+from budgie.models.transaction import Transaction
+from budgie.models.merchant import Merchant
+from budgie.models.tag import Tag
+import budgie.repositories.merchant_repository as merchant_repository
+import budgie.repositories.tag_repository as tag_repository
 
 
 

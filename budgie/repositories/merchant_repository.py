@@ -1,8 +1,8 @@
-from app.db.run_sql import run_sql
+from budgie.db.run_sql import run_sql
 
-from app.models.merchant import Merchant
-from app.models.tag import Tag
-from app.models.transaction import Transaction
+from budgie.models.merchant import Merchant
+from budgie.models.tag import Tag
+from budgie.models.transaction import Transaction
 
 
 # save a merchant
@@ -54,7 +54,7 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-# show all tags a merchant has
+# show all tags a merchant has been assigned
 def tags(merchant):
     tags = []
 
