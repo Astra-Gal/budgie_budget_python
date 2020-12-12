@@ -3,7 +3,7 @@ from flask import Flask, Blueprint, render_template, redirect, request, url_for
 from budgie.controllers.merchants_controller import merchants_blueprint
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='budgie/templates')
 
 app.register_blueprint(merchants_blueprint)
 
