@@ -57,3 +57,17 @@ def delete(id):
     sql = "DELETE FROM transactions WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def merchant(transaction):
+    sql = "SELECT * FROM merchants WHERE id = %s"
+    values = [transaction.merchant.id]
+    results = run_sql(sql, values)[0]
+    merchant = Merchant(results['name'], results['id'])
+    return merchant
+
+def tag(transaction):
+    sql = "SELECT * FROM tags WHERE id = %s"
+    values = [transaction.tag.id]
+    results = run_sql(sql, values)[0]
+    tag = Tag(results['category'], results['id'])
+    return tag
