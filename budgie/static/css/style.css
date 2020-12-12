@@ -1,6 +1,17 @@
 body {
-    background-color: chartreuse;
+    background-color: antiquewhite;
 }
+
+#navbar {
+    background-color: #F9B5AC;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Cormorant', serif;
+    font-size: 4em;
+}
+
 
 /* 
 #budgie-image {
