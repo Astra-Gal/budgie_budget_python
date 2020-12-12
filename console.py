@@ -76,3 +76,11 @@ transaction_repository.save(transaction_4)
 transaction_5 = Transaction(25.99, merchant_5, tag_5)
 transaction_repository.save(transaction_5)
 
+transaction_6 = Transaction(17.80, merchant_3, tag_2)
+transaction_repository.save(transaction_6)
+
+transaction_7 = Transaction(12.34, merchant_3, tag_6)
+transaction_repository.save(transaction_7)
+
+transaction_8 = Transaction(22.46, merchant_1, tag_8)
+transaction_repository.save(transaction_8)
