@@ -77,3 +77,16 @@ def total_transactions():
     sql = "SELECT SUM (amount) FROM transactions"
     total = run_sql(sql)
     return total
+
+# get total of all transactions for a particular merchant
+def total_transactions_by_merchant():
+    sql = "SELECT merchant_id, SUM (amount) AS totals FROM transactions GROUP BY merchant_id ORDER BY totals DESC"
+    totals = run_sql(sql)
+    return totals
+
+
+# get total of all transactions for a particular tag
+def total_transactions_by_tag():
+    sql = "SELECT tag_id, SUM (amount) AS totals FROM transactions GROUP BY tag_id ORDER BY totals DESC"
+    totals = run_sql(sql)
+    return totals
