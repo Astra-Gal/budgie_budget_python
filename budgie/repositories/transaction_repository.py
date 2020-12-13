@@ -38,7 +38,9 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        transaction = Transaction(result['amount'], result['merchant.id'], result['tag.id'], result['id'])
+        merchant = merchant_repository.select(result['merchant_id'])
+        tag = tag_repository.select(result['tag_id'])
+        transaction = Transaction(result['amount'], merchant, tag, result['id'])
     return transaction
 
 # edit 

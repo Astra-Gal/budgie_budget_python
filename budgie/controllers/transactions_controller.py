@@ -17,3 +17,10 @@ def transactions():
     transactions = transaction_repository.select_all()
     return render_template("transactions/index.html", transactions=transactions)
 
+# show a particular transaction
+@transactions_blueprint.route("/transactions/<id>")
+def show(id):
+    transaction = transaction_repository.select(id)
+    merchant = transaction_repository.merchant(transaction)
+    tag = transaction_repository.tag(transaction)
+    return render_template("transactions/show.html", transaction=transaction, merchant=merchant, tag=tag)

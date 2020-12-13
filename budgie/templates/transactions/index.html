@@ -6,7 +6,7 @@
 
 {% for transaction in transactions %}
 <section>
-    <p>{{ transactions.amount }}</p>
+    <p><a href="/transactions/{{ transaction.id }}"> {{ transaction.amount }}</p>
 </section>
 
 {% endfor %}

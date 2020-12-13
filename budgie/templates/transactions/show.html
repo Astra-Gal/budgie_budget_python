@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Let's see more detail!</h2>
+<ul>
+<li>{{ transaction.amount }} is the amount</li>
+<li>{{ merchant.name }} is the merchant</li> 
+<li>{{ tag.category }} is the tag</li>
+
+</ul>
+
+{% endblock %}
