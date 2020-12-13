@@ -1,0 +1,14 @@
+{% extends 'base.html'  %}
+
+{% block content %}
+<section id="budgie-image"></section>
+<h2>transactions will go here</h2>
+
+{% for transaction in transactions %}
+<section>
+    <p>{{ transactions.amount }}</p>
+</section>
+
+{% endfor %}
+
+{% endblock %}

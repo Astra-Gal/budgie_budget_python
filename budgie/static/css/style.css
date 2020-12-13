@@ -2,16 +2,49 @@ body {
     background-color: antiquewhite;
 }
 
-#navbar {
+#site-header {
+    display: grid;
+    align-items: center;
+    grid-template-areas: "logo navbar";
     background-color: #F9B5AC;
 }
 
-#navbar > ul {
+#site-header > section {
+    grid-area: "logo";
+    display: grid;
+    grid-template-areas: "logo-text colour-gradient";
+    gap: 1em;
+    align-items: center;
+
+}
+
+
+#site-header > section > h1 {
+    grid-area: "logo-text";
+    font-family: 'Cormorant', serif;
+    font-size: 90px;
+    display: inline-block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-left: 0.2em;
+}
+
+/* this div is currently invisible - why?! */
+#site-header > section > div {
+    grid-area: "colour-gradient";
+    background-color: #8789C0;
+
+}
+#site-header > nav {
+    grid-area: "navbar";
+}
+
+#site-header > nav > ul {
     display: flex;
     justify-content: flex-end;
 }
 
-#navbar > ul > li {
+#site-header > nav > ul > li {
     list-style-type: none;
     margin: 10px;
     padding: 10px;
@@ -19,7 +52,7 @@ body {
     border-radius: 7px;
 }
 
-#navbar > ul > li > a {
+#site-header > nav > ul > li > a {
     text-decoration: none;
     color: #392F5A;
     font-family: 'Cormorant', serif;
@@ -27,10 +60,6 @@ body {
     font-size: 1.2em;
 }
 
-h1 {
-    font-family: 'Cormorant', serif;
-    font-size: 4em;
-}
 
 
 /* 

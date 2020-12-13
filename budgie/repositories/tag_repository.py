@@ -1,8 +1,8 @@
-from app.db.run_sql import run_sql
+from budgie.db.run_sql import run_sql
 
-from app.models.tag import Tag
-from app.models.transaction import Transaction
-from app.models.merchant import Merchant
+from budgie.models.tag import Tag
+from budgie.models.transaction import Transaction
+from budgie.models.merchant import Merchant
 
 # save
 def save(tag):

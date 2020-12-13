@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
+
 from budgie.models.merchant import Merchant
 import budgie.repositories.merchant_repository as merchant_repository
 

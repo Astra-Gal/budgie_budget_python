@@ -1,7 +1,13 @@
 {% extends 'base.html'  %}
 
 {% block content %}
-<h1>Budgie</h1>
 <section id="budgie-image"></section>
+
+{% for transaction in transactions %}
+<section>
+    <p>{{ transactions.amount }}</p>
+</section>
+
+{% endfor %}
 
 {% endblock %}
