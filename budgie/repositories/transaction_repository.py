@@ -78,7 +78,7 @@ def tag(transaction):
 def total_transactions():
     sql = "SELECT SUM (amount) FROM transactions"
     total = run_sql(sql)
-    return total
+    return total[0:5]
 
 # get total of all transactions for a particular merchant
 def total_transactions_by_merchant():

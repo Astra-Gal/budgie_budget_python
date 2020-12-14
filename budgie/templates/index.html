@@ -2,10 +2,12 @@
 
 {% block content %}
 <section id="budgie-image"></section>
+<h2>What do you want to do?</h2>
 
-{% for transaction in transactions %}
-<section>
-    <p>{{ transactions.amount }}</p>
+<a href="/transactions">See all transactions</a>
+
+Add a new transaction
+
 </section>
 
 {% endfor %}

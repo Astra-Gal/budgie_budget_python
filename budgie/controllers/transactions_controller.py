@@ -15,12 +15,15 @@ transactions_blueprint = Blueprint("transactions", __name__)
 @transactions_blueprint.route("/transactions")
 def transactions():
     transactions = transaction_repository.select_all()
-    return render_template("transactions/index.html", transactions=transactions)
+    total_transactions = transaction_repository.total_transactions()
+    return render_template("transactions/index.html", transactions=transactions, total_transactions=total_transactions)
 
-# show a particular transaction
+# show a particular transaction in more detail
 @transactions_blueprint.route("/transactions/<id>")
 def show(id):
     transaction = transaction_repository.select(id)
     merchant = transaction_repository.merchant(transaction)
     tag = transaction_repository.tag(transaction)
     return render_template("transactions/show.html", transaction=transaction, merchant=merchant, tag=tag)
+
+# add a new transaction

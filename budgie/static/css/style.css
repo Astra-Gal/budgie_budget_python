@@ -33,6 +33,7 @@ body {
 #site-header > section > div {
     grid-area: "colour-gradient";
     background-color: #8789C0;
+    border: 2px;
 
 }
 #site-header > nav {
@@ -63,6 +64,9 @@ body {
 h2 {
     font-family: 'Poppins', sans-serif;
 
+}
+h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
