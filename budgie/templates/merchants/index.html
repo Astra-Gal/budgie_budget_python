@@ -3,13 +3,23 @@
 {% block content %}
 <section id="budgie-image"></section>
 
-<h2>Merchants will go here</h2>
+<h2>MERCHANTS WILL GO HERE</h2>
 
-{% for transaction in transactions %}
+{% for merchant in merchants %}
 <section>
-    <p>{{ transactions.amount }}</p>
+    <p>{{ merchant.name }}</p>
 </section>
 
 {% endfor %}
+
+<form action="/merchants" method="post">
+    <fieldset>
+        <legend>add a new merchant:</legend>
+        <label for="name">merchant:</label>
+        <input type="text" id="name" name="name" value="name" placeholder="name" required autofocus>
+        <button type="submit">add tag</button>
+
+    </fieldset>
+</form>
 
 {% endblock %}

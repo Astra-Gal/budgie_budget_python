@@ -10,7 +10,7 @@ merchants_blueprint = Blueprint("merchants", __name__)
 @merchants_blueprint.route("/merchants")
 def merchants():
     merchants = merchant_repository.select_all()
-    return render_template("merchants/index.html", merchants = merchants)
+    return render_template("merchants/index.html", merchants=merchants)
 
 # show all the tags a merchant has been assigned
 @merchants_blueprint.route("/merchants/<id>")
@@ -18,3 +18,11 @@ def show(id):
     merchant = merchant_repository.select(id)
     tags = merchant_repository.tags(merchant)
     return render_template("merchants/show.html", merchant=merchant, tags=tags)
+
+# CREATE - add a new merchant
+@merchants_blueprint.route("/merchants", methods=['POST'])
+def create_merchant():
+    name = request.form['name']
+    merchant = Merchant(name)
+    merchant_repository.save(merchant)
+    return redirect('/merchants')

@@ -18,7 +18,7 @@ def tags():
     return render_template("tags/index.html", tags=tags)
 
 
-# CREATE - add a new transaction - currently not working
+# CREATE - add a new tag
 @tags_blueprint.route("/tags", methods=['POST'])
 def create_tag():
     category = request.form['category']
