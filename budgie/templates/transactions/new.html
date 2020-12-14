@@ -1,5 +1,21 @@
 {% extends 'base.html'  %}
 
 {% block content %}
+<form action="/transactions" method="post">
+    <fieldset>
+        <legend>add a new transaction:</legend>
+        <label for="amount">amount:</label>
+        <input type="text" id="amount" name="amount" placeholder="amount" required autofocus>
+
+        <label for="merchant">merchant:</label>
+        <input type="text" id="merchant" name="merchant" placeholder="merchant" required autofocus>
+
+        <label for="tag">tag:</label>
+        <input type="text" id="tag" name="tag" placeholder="tag" required autofocus>
+
+        <button type="submit">add transaction</button>
+    </fieldset>
+</form>
+
 
 {% endblock %}

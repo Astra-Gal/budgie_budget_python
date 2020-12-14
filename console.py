@@ -1,11 +1,11 @@
 import pdb
-from app.models.merchant import Merchant 
-from app.models.tag import Tag
-from app.models.transaction import Transaction
+from budgie.models.merchant import Merchant 
+from budgie.models.tag import Tag
+from budgie.models.transaction import Transaction
 
-import app.repositories.merchant_repository as merchant_repository
-import app.repositories.tag_repository as tag_repository
-import app.repositories.transaction_repository as transaction_repository
+import budgie.repositories.merchant_repository as merchant_repository
+import budgie.repositories.tag_repository as tag_repository
+import budgie.repositories.transaction_repository as transaction_repository
 
 transaction_repository.delete_all()
 merchant_repository.delete_all()
@@ -29,6 +29,8 @@ merchant_repository.save(merchant_5)
 
 merchant_6 = Merchant("Kathy Knits")
 merchant_repository.save(merchant_6)
+
+
 
 # tags
 tag_1 = Tag("Groceries")

@@ -1,3 +1,4 @@
+import pdb
 from budgie.db.run_sql import run_sql
 
 from budgie.models.transaction import Transaction
@@ -10,6 +11,7 @@ import budgie.repositories.tag_repository as tag_repository
 
 # save
 def save(transaction):
+    transaction.convert_to_pennies()
     sql = "INSERT INTO transactions (amount, merchant_id, tag_id) VALUES (%s, %s, %s) RETURNING id"
     values = [transaction.amount, transaction.merchant.id, transaction.tag.id]
     results = run_sql(sql, values)
@@ -77,8 +79,13 @@ def tag(transaction):
 # get total for all transactions
 def total_transactions():
     sql = "SELECT SUM (amount) FROM transactions"
-    total = run_sql(sql)
-    return total[0:5]
+    result = run_sql(sql)
+    # pdb.set_trace()
+    total_as_pennies = result[0][0]
+    return total_as_pennies / 100
+
+    
+
 
 # get total of all transactions for a particular merchant
 def total_transactions_by_merchant():
