@@ -16,3 +16,12 @@ tags_blueprint = Blueprint("tags", __name__)
 def tags():
     tags = tag_repository.select_all()
     return render_template("tags/index.html", tags=tags)
+
+
+# CREATE - add a new transaction - currently not working
+@tags_blueprint.route("/tags", methods=['POST'])
+def create_tag():
+    category = request.form['category']
+    tag = Tag(category)
+    tag_repository.save(tag)
+    return redirect('/tags')

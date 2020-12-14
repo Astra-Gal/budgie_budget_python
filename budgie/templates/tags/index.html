@@ -3,13 +3,24 @@
 {% block content %}
 <section id="budgie-image"></section>
 
-<h2>Tags will go here</h2>
+<h2>TAGS WILL GO HERE</h2>
 
-{% for transaction in transactions %}
+{% for tag in tags %}
 <section>
-    <p>{{ transactions.amount }}</p>
+    <p>{{ tag.category }}</p>
 </section>
 
 {% endfor %}
+
+<form action="/tags" method="post">
+    <fieldset>
+        <legend>add a new tag:</legend>
+        <label for="category">category:</label>
+        <input type="text" id="category" name="category" value="category" placeholder="category" required autofocus>
+        <button type="submit">add tag</button>
+
+    </fieldset>
+</form>
+
 
 {% endblock %}

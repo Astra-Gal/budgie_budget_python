@@ -49,6 +49,7 @@ def select(id):
 def update(transaction):
     sql = "UPDATE transactions SET (amount, merchant_id, tag_id) = (%s, %s, %s) WHERE id = %s"
     values = [transaction.amount, transaction.merchant.id, transaction.tag.id, transaction.id]
+    print(values)
     run_sql(sql, values)
 
 # delete_all

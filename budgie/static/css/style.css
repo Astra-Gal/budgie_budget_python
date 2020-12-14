@@ -62,10 +62,14 @@ body {
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
     font-family: 'Poppins', sans-serif;
 }
 

@@ -1,3 +1,4 @@
+import pdb
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 
@@ -30,8 +31,12 @@ def show(id):
 @transactions_blueprint.route("/transactions", methods =['POST'])
 def create_transaction():
     amount = request.form['amount']
-    merchant = merchant_repository.save(request.form['merchant'])
-    tag = tag_repository.save(request.form['tag'])
+    # pdb.set_trace()
+
+    # i will need ids for tag and merchant below
+    
+    tag = tag_repository.select(request.form['tag'])
+    merchant = merchant_repository.select(request.form['merchant'])
     transaction = Transaction(amount, merchant, tag)
     transaction_repository.save(transaction)
     return redirect('/transactions')
