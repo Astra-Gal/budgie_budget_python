@@ -7,6 +7,7 @@ body {
     align-items: center;
     grid-template-areas: "logo navbar";
     background-color: #F9B5AC;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.2);
 }
 
 #site-header > section {
@@ -27,6 +28,11 @@ body {
     margin-block-start: 0.2em;
     margin-block-end: 0.2em;
     margin-left: 0.2em;
+}
+
+#site-header > section > h1 > a {
+    text-decoration: none;
+    color: #2c0735;
 }
 
 /* this div is currently invisible - why?! */
@@ -61,6 +67,10 @@ body {
     font-size: 1.2em;
 }
 
+h1 {
+    font-family: 'Abril Fatface', cursive;
+}
+
 h2 {
     font-family: 'Montserrat', sans-serif;
 
@@ -70,7 +80,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 p {
@@ -80,9 +90,10 @@ p {
 
 
 
-/* 
-#budgie-image {
-    width: 70vw;
-    background-image: url('/static/images/budgie_pound.png');
-
+/* this doesn't show! */
+/* #budgie-image {
+    width: 100vw;
+    background-image: url('static/images/budgie_pound.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 } */

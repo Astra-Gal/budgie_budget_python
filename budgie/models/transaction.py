@@ -7,7 +7,7 @@ class Transaction:
         self.id = id
 
     def convert_to_pennies(self):
-        self.amount = self.amount * 100
+        self.amount = float(self.amount) * 100
 
     def convert_to_pounds(self, amount_as_pennies):
         return amount_as_pennies / 100

@@ -3,40 +3,15 @@
 {% block content %}
 <h2>Transactions go here</h2>
 
-<section class="card">
+<section id="transaction-grid">
 {% for transaction in transactions %}
-    <p><a href="/transactions/{{ transaction.id }}"> {{ transaction.amount }}</a></p>
+    <p><a href="/transactions/{{ transaction.id }}"> {{ transaction.amount / 100 }}</a></p>
 
 {% endfor %}
+<p>total: {{ total_transactions }}</p>
+<p><a href="/transactions/new">add new 	&#10133;</a></p>
 </section> 
 
-<h4>total transactions: {{ total_transactions }} </h4>
-
-<form action="/transactions" method="post">
-    <fieldset>
-        <legend>add a new transaction:</legend>
-        <label for="amount">amount:</label>
-        <input type="text" id="amount" name="amount" placeholder="amount" required autofocus>
-
-        <label for="merchant">merchant:</label>
-        <select id="merchant" name="merchant">
-            {% for merchant in merchants %}
-            <option value="{{ merchant.id }}">{{ merchant.name }}</option>
-            {% endfor %}
-        </select>
 
 
-        <label for="tag">tag:</label>
-        <select id="tag" name="tag">
-            {% for tag in tags %}
-            <option value="{{ tag.id }}">{{ tag.category }}</option>
-            {% endfor %}
-        </select>
-
-        <button type="submit">add transaction</button> 
-    </fieldset>
-</form>
-
-
-<h3><a href="/transactions/new">add a new transaction &#9758;</a></h3>
 {% endblock %}

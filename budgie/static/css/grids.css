@@ -1,0 +1,43 @@
+#transaction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+#transaction-grid > p {
+    border: 2px dotted darkturquoise;
+    border-radius: 7px;
+    padding-bottom: 20px;
+    box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
+    width: 100%;
+}
+#transaction-grid > p > a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr;
+    max-width: 600px;
+}
+
+.header-wrapper > h1 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 2em;
+}
+
+#budgie-image {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    max-width: 440px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: scale-down;
+}

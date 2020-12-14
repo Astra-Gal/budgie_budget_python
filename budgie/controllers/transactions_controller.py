@@ -29,7 +29,13 @@ def show(id):
     tag = transaction_repository.tag(transaction)
     return render_template("transactions/show.html", transaction=transaction, merchant=merchant, tag=tag)
 
-# CREATE - add a new transaction - currently not working
+@transactions_blueprint.route("/transactions/new")
+def new():
+    merchants = merchant_repository.select_all()
+    tags = tag_repository.select_all()
+    return render_template("transactions/new.html", merchants=merchants, tags=tags)
+
+# CREATE - add a new transaction 
 @transactions_blueprint.route("/transactions", methods =['POST'])
 def create_transaction():
     amount = float(request.form['amount'])

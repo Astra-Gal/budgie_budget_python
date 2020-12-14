@@ -15,8 +15,7 @@ def save(transaction):
     sql = "INSERT INTO transactions (amount, merchant_id, tag_id) VALUES (%s, %s, %s) RETURNING id"
     values = [transaction.amount, transaction.merchant.id, transaction.tag.id]
     results = run_sql(sql, values)
-    pdb.set_trace()
-
+    # pdb.set_trace()
     transaction.id = results[0]['id']
     return transaction
 
