@@ -1,4 +1,18 @@
+
+#transaction-grid-wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+
+#transaction-grid-wrapper > h2 {
+    grid-column-start: 2;
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+}
+
 #transaction-grid {
+    grid-column-start: 2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -10,10 +24,18 @@
     padding-bottom: 20px;
     box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
     width: 100%;
+    text-align: center;
 }
+#transaction-grid > #add-new-tra {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
 #transaction-grid > p > a {
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
 }
 
 .header-wrapper {
