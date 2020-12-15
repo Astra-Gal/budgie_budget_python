@@ -44,7 +44,7 @@ def select(id):
         merchant = merchant_repository.select(result['merchant_id'])
         tag = tag_repository.select(result['tag_id'])
         transaction = Transaction(result['amount'], merchant, tag, result['id'])
-    return transaction
+    return transaction 
 
 # edit 
 def update(transaction):

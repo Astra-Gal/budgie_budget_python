@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/tags/{{tag.id}}" method="post" class="add-to-db">
+    <h4>edit a tag</h4>
+    <select id="tag" name="tag">
+        <option value="none" selected disabled hidden>
+            choose a tag to update
+        </option>
+        {% for tag in tags %}
+        <option value="{{ tag.id }}">{{ tag.category }}</option>
+        {% endfor %}
+    </select>
+    <input type="text" id="edited-category" name="edited-category" value="{{ tag.category }}" required autofocus>
+    <button type="submit" id="edit-tag">edit tag  &#10513;</button> 
+
+</form>
+
+
+
+{% endblock %}

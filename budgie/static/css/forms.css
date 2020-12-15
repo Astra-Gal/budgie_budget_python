@@ -28,7 +28,7 @@
     grid-row-start: 5;
 }
 
-#add-transaction {
+.submitter {
     grid-column-start: 2;
     grid-row-start: 6;
 }

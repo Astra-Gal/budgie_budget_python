@@ -19,7 +19,7 @@ def tags():
 
 # show a tag by id
 # GET 'tags/<id>'
-@tags_blueprint.route("/tags/,<id>")
+@tags_blueprint.route("/tags/<id>")
 def show(id):
     tag = tag_repository.select(id)
     tags = tag_repository.select_all()
@@ -38,5 +38,9 @@ def create_tag():
 @tags_blueprint.route("/tags/<id>/edit")
 def edit_tag(id):
     tag = tag_repository.select(id)
-    # tags = tag_repository.select_all() what here??
-    return render_template("tags/edit.html", tag=tag, tags=tags)
+    # tags = tag_repository.select_all() what here?? tags=tags
+    return render_template("tags/edit.html", tag=tag)
+
+# UPDATE - PUT '/tags/
+# @tags_blueprint.route("/tags/<id>", methods['POST'])
+# def update_tag(id):

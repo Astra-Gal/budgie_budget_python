@@ -4,6 +4,7 @@ from budgie.models.tag import Tag
 from budgie.models.transaction import Transaction
 from budgie.models.merchant import Merchant
 
+
 # save
 def save(tag):
     sql = "INSERT INTO tags (category) VALUES (%s) RETURNING id"

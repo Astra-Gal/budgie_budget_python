@@ -29,6 +29,7 @@ def show(id):
     tag = transaction_repository.tag(transaction)
     return render_template("transactions/show.html", transaction=transaction, merchant=merchant, tag=tag)
 
+# ADD - make a new transaction
 @transactions_blueprint.route("/transactions/new")
 def new():
     merchants = merchant_repository.select_all()
@@ -43,4 +44,22 @@ def create_transaction():
     merchant = merchant_repository.select(request.form['merchant'])
     transaction = Transaction(amount, merchant, tag)
     transaction_repository.save(transaction)
+    return redirect('/transactions')
+
+#EDIT - GET '/transactions/<id>/edit'
+@transactions_blueprint.route("/transactions/<id>/edit")
+def edit_transaction(id):
+    transaction = transaction_repository.select(id)
+    tags = tag_repository.select_all()
+    merchants = merchant_repository.select_all()
+    return render_template('transactions/edit.html', transaction=transaction, tags=tags, merchants=merchants)
+
+# UPDATE - PUT the values from the form on edit back in '/transactions/<id>'
+@transactions_blueprint.route("/transactions/<id>", methods=['POST'])
+def update_transaction(id):
+    amount = float(request.form['amount']) * 100
+    tag = tag_repository.select(request.form['tag'])
+    merchant = merchant_repository.select(request.form['merchant'])
+    transaction = Transaction(amount, merchant, tag, id)
+    transaction_repository.update(transaction)
     return redirect('/transactions')
