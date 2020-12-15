@@ -17,6 +17,14 @@ def tags():
     tags = tag_repository.select_all()
     return render_template("tags/index.html", tags=tags)
 
+# show a tag by id
+# GET 'tags/<id>'
+@tags_blueprint.route("/tags/,<id>")
+def show(id):
+    tag = tag_repository.select(id)
+    tags = tag_repository.select_all()
+    return render_template("tags/show.html", tag=tag, tags=tags)
+
 
 # CREATE - add a new tag
 @tags_blueprint.route("/tags", methods=['POST'])
@@ -25,3 +33,10 @@ def create_tag():
     tag = Tag(category)
     tag_repository.save(tag)
     return redirect('/tags')
+
+# EDIT get - edit a tag
+@tags_blueprint.route("/tags/<id>/edit")
+def edit_tag(id):
+    tag = tag_repository.select(id)
+    # tags = tag_repository.select_all() what here??
+    return render_template("tags/edit.html", tag=tag, tags=tags)

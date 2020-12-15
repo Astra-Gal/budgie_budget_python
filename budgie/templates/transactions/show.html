@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<section  class="add-to-db">
 
-<h2>Let's see more detail!</h2>
-<ul>
-<li>£{{ transaction.amount / 100 }} is the amount</li>
-<li><a href="/merchants">{{ merchant.name }}</a> is the merchant</li> 
-<li><a href="/tags">{{ tag.category }}</a> is the tag</li>
+    <h2>Let's see more detail!</h2>
+    <ul>
+        <li>£{{ transaction.amount / 100 }} is the amount</li>
+        <li><a href="/merchants">{{ merchant.name }}</a> is the merchant</li> 
+        <li><a href="/tags">{{ tag.category }}</a> is the tag</li>
+        
+    </ul>
+</section>
 
-</ul>
 
 {% endblock %}

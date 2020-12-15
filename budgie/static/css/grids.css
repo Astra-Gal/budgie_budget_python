@@ -28,7 +28,7 @@
 }
 #transaction-grid > #add-new-tra {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: -1;
     text-align: center;
 }
 
