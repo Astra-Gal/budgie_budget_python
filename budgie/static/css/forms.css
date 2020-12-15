@@ -1,0 +1,62 @@
+.add-to-db {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.25 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.add-to-db > h4 {
+    font-size: 1.5em;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+#amount {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+#merchant {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+#tag {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+
+#add-transaction {
+    grid-column-start: 2;
+    grid-row-start: 6;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted darkturquoise;
+    border-radius: 7px;
+    padding-bottom: 20px;
+    box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
+    outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #539987;
+}
+
+select {
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted darkturquoise;
+    border-radius: 7px;
+    padding-bottom: 20px;
+    box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+select:focus {
+    border: 3px solid #539987;
+}

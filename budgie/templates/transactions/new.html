@@ -2,28 +2,29 @@
 
 {% block content %}
 
-<form action="/transactions" method="post">
-    <fieldset>
-        <legend>add a new transaction:</legend>
-        <label for="amount">amount:</label>
+<form action="/transactions" method="post" class="add-to-db">
+        <h4>add a new transaction</h4>
         <input type="text" id="amount" name="amount" placeholder="amount" required autofocus>
 
-        <label for="merchant">merchant:</label>
         <select id="merchant" name="merchant">
+            <option value="none" selected disabled hidden>
+                choose a merchant
+            </option>
             {% for merchant in merchants %}
             <option value="{{ merchant.id }}">{{ merchant.name }}</option>
             {% endfor %}
         </select>
 
-        <label for="tag">tag:</label>
         <select id="tag" name="tag">
+            <option value="none" selected disabled hidden>
+                choose a tag
+            </option>
             {% for tag in tags %}
             <option value="{{ tag.id }}">{{ tag.category }}</option>
             {% endfor %}
         </select>
 
-        <button type="submit">add transaction</button> 
-    </fieldset>
+        <button type="submit" id="add-transaction">add transaction</button> 
 </form>
 
 
