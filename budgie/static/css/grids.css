@@ -1,7 +1,7 @@
 #transaction-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 #transaction-grid > p {
@@ -25,15 +25,15 @@
 
 #budgie-image {
     grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 4;
-    max-width: 540px;
+    max-width: 700px;
     height: auto;
     border-radius: 3px;
     object-fit: scale-down;
     border: 3px solid #fffc31;
-    padding: 100px;
+    padding: 20px 100px 30px 30px;
     margin: 10px;
 }
 
