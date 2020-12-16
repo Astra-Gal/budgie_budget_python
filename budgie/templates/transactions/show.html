@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
 <section  class="add-to-db">
-
-    <h2>Let's see more detail!</h2>
-    <ul>
-        <li>£{{ transaction.amount / 100 }} is the amount</li>
-        <li>{{ merchant.name }} is the merchant</li> 
-        <li>{{ tag.category }} is the tag</li>
-        <li><a href="/transactions/{{ transaction.id }}/edit">edit transaction</a></li>
-    </ul>
+    <h4>you spent...</h4>
+    <p class="input-one">£{{ transaction.amount / 100 }}
+    <br>at {{ merchant.name }}
+    <br>on {{ tag.category }}</p>
+    <p class="submitter"><a href="/transactions/{{ transaction.id }}/edit">edit transaction &#10513;</a></p>
 </section>
 
 

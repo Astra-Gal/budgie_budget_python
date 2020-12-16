@@ -29,12 +29,14 @@
     grid-column-start: 2;
     grid-row-start: 5;
     font-size: 1.5em;
+    text-align: center;
 }
 
 .submitter {
     grid-column-start: 2;
     grid-row-start: 6;
     font-size: 1.5em;
+    text-align: center;
 }
 
 *, *:before, *:after {
@@ -50,6 +52,8 @@ input[type=text] {
     box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
     outline: none;
 }
+
+
 input[type=text]:focus {
     border: 3px solid #539987;
 }
@@ -67,4 +71,20 @@ select {
 
 select:focus {
     border: 3px solid #539987;
+}
+
+.add-to-db > p {
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted darkturquoise;
+    border-radius: 7px;
+    padding-bottom: 20px;
+    box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+.add-to-db > p > a {
+    text-decoration: none;
 }
