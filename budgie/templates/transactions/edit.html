@@ -4,9 +4,9 @@
 
 <form action="/transactions/{{ transaction.id }} " method="post" class="add-to-db">
     <h4>edit transaction</h4>
-    <input type="text" id="amount" name="amount" placeholder="amount" required autofocus>
+    <input type="text" class="input-one" id="amount" name="amount" placeholder="amount" required autofocus>
 
-    <select id="merchant" name="merchant">
+    <select id="merchant" class="input-two" name="merchant">
         <option value="none" selected disabled hidden>
             choose a merchant
         </option>
@@ -15,7 +15,7 @@
         {% endfor %}
     </select>
 
-    <select id="tag" name="tag">
+    <select id="tag" class="input-three" name="tag">
         <option value="none" selected disabled hidden>
             choose a tag
         </option>
