@@ -12,14 +12,15 @@
 
 {% endfor %}
 
-<form action="/merchants" method="post">
-    <fieldset>
-        <legend>add a new merchant:</legend>
-        <label for="name">merchant:</label>
-        <input type="text" id="name" name="name" value="name" placeholder="name" required autofocus>
-        <button type="submit">add merchant</button>
+<form action="/merchants" method="post" class="add-to-db">
+    <h4>add a new merchant</h4>
+    <input type="text" id="name" name="name" placeholder="e.g. Tesco" required autofocus>
 
-    </fieldset>
+
+    <button type="submit" class="submitter">add merchant  &#10513;</button> 
+
 </form>
+
+
 
 {% endblock %}
