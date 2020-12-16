@@ -2,17 +2,16 @@
 
 {% block content %}
 
-<h2>MERCHANTS WILL GO HERE</h2>
-
-{% for merchant in merchants %}
-<section>
-    <p>{{ merchant.name }}</p>
-</section>
-
-{% endfor %}
-<p class="add-new-tra"><a href="/merchants/new">add new &#10513;</a></p>
-
-
+<div class="transaction-grid-wrapper">
+    <h2>here are your merchants</h2>
+    <section class="transaction-grid">
+        {% for merchant in merchants %}
+            <p><a href="#">{{ merchant.name }}</a></p>
+        {% endfor %}
+        <p class="add-new-tra"><a href="/merchants/new">add new &#10513;</a></p>
+    </section> 
+</div>
 
 
+ 
 {% endblock %}

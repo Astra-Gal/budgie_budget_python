@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="transaction-grid-wrapper">
-    <h2>Here's what you've spent so far: £{{ total_transactions }}</h2>
+    <h2>here's what you've spent so far: £{{ total_transactions }}</h2>
     <section class="transaction-grid">
         {% for transaction in transactions %}
             <p><a href="/transactions/{{ transaction.id }}">£{{ transaction.amount / 100 }}</a></p>
