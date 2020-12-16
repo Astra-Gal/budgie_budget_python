@@ -1,7 +1,6 @@
 {% extends 'base.html'  %}
 
 {% block content %}
-<section id="budgie-image"></section>
 
 <h2>TAGS WILL GO HERE</h2>
 
@@ -11,15 +10,9 @@
 </section>
 
 {% endfor %}
-
-<form action="/tags" method="post" class="add-to-db">
-    <h4>add a new tag</h4>
-    <input type="text" id="category" name="category" placeholder="category" required autofocus>
+<p class="add-new-tra"><a href="/tags/new">add new &#10513;</a></p>
 
 
-    <button type="submit" class="submitter">add tag  &#10513;</button> 
-
-</form>
 
 
 {% endblock %}

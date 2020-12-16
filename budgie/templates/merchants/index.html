@@ -1,7 +1,6 @@
 {% extends 'base.html'  %}
 
 {% block content %}
-<section id="budgie-image"></section>
 
 <h2>MERCHANTS WILL GO HERE</h2>
 
@@ -11,15 +10,8 @@
 </section>
 
 {% endfor %}
+<p class="add-new-tra"><a href="/merchants/new">add new &#10513;</a></p>
 
-<form action="/merchants" method="post" class="add-to-db">
-    <h4>add a new merchant</h4>
-    <input type="text" id="name" name="name" placeholder="e.g. Tesco" required autofocus>
-
-
-    <button type="submit" class="submitter">add merchant  &#10513;</button> 
-
-</form>
 
 
 

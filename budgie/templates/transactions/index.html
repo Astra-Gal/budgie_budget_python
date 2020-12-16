@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div id="transaction-grid-wrapper">
+<div class="transaction-grid-wrapper">
     <h2>Here's what you've spent so far: £{{ total_transactions }}</h2>
-    <section id="transaction-grid">
+    <section class="transaction-grid">
         {% for transaction in transactions %}
             <p><a href="/transactions/{{ transaction.id }}">£{{ transaction.amount / 100 }}</a></p>
 
         {% endfor %}
-        <p id="add-new-tra"><a href="/transactions/new">add new &#10513;</a></p>
+        <p class="add-new-tra"><a href="/transactions/new">add new &#10513;</a></p>
     </section> 
 </div>
 

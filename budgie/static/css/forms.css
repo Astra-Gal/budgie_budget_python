@@ -11,19 +11,19 @@
     text-align: center;
 }
 
-#amount {
+.input-one {
     grid-column-start: 2;
     grid-row-start: 3;
     text-align: center;
 }
 
-#merchant {
+.input-two {
     grid-column-start: 2;
     grid-row-start: 4;
     text-align: center;
 }
 
-#tag {
+.input-three {
     grid-column-start: 2;
     grid-row-start: 5;
 }

@@ -19,6 +19,11 @@ def show(id):
     tags = merchant_repository.tags(merchant)
     return render_template("merchants/show.html", merchant=merchant, tags=tags)
 
+# ADD - where the form for a new tag lives
+@merchants_blueprint.route("/merchants/new")
+def new():
+    return render_template("merchants/new.html")
+
 # CREATE - add a new merchant
 @merchants_blueprint.route("/merchants", methods=['POST'])
 def create_merchant():

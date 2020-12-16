@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/tags" method="post" class="add-to-db">
+    <h4>add a new tag</h4>
+    <input type="text" id="category" class="input-one" name="category" placeholder="category" required autofocus>
+
+
+    <button type="submit" class="submitter">add tag  &#10513;</button> 
+
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/merchants" method="post" class="add-to-db">
+    <h4>add a new merchant</h4>
+    <input type="text" id="name" class="input-one" name="name" placeholder="e.g. Tesco" required autofocus>
+
+
+    <button type="submit" class="submitter">add merchant  &#10513;</button> 
+
+</form>
+
+
+{% endblock %}

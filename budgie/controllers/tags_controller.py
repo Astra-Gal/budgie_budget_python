@@ -25,6 +25,11 @@ def show(id):
     tags = tag_repository.select_all()
     return render_template("tags/show.html", tag=tag, tags=tags)
 
+# ADD - where the form for a new tag lives
+@tags_blueprint.route("/tags/new")
+def new():
+    return render_template("tags/new.html")
+
 
 # CREATE - add a new tag
 @tags_blueprint.route("/tags", methods=['POST'])
