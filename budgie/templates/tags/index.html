@@ -12,15 +12,13 @@
 
 {% endfor %}
 
+<form action="/tags" method="post" class="add-to-db">
+    <h4>add a new tag</h4>
+    <input type="text" id="category" name="category" placeholder="category" required autofocus>
 
-<form action="/tags" method="post">
-    <fieldset>
-        <legend>add a new tag:</legend>
-        <label for="category">category:</label>
-        <input type="text" id="category" name="category" value="category" placeholder="category" required autofocus>
-        <button type="submit">add tag</button>
 
-    </fieldset>
+    <button type="submit" class="submitter">add tag  &#10513;</button> 
+
 </form>
 
 
