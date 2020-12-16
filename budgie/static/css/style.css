@@ -7,7 +7,6 @@ body {
     box-shadow: 0 2px 2px 1px rgba(0,0,0,0.2);
     align-items: stretch;
 }
-/* background-color: #F9B5AC; */
 
 @media (min-width: 550px) {
 #site-header {
