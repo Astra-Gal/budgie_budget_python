@@ -54,5 +54,5 @@ python3 console.py
 ```zsh
 flask run
 ```
-The app will be running in the browser on localhost:5000
+Follow the link to localhost:5000 to view the app in the browser
 
